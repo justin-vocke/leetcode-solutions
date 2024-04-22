@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
+
 public class Solution1
 {
     public int[] TwoSum(int[] nums, int target)
@@ -27,4 +28,14 @@ public class Solution1
     }
 }
 
-
+public class Solution2
+{
+    public bool IsPalindrome(int x)
+    {
+        var stringFromInt = x.ToString();
+        var charArrayFromString = stringFromInt.ToCharArray();
+        var charArrayReversed = charArrayFromString.Reverse().ToArray();
+        var stringReversed = new string(charArrayReversed);
+        return stringFromInt == stringReversed;
+    }
+}
